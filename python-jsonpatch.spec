@@ -3,7 +3,7 @@ Version:        0.12.0
 Release:        1%{?dist}
 Summary:        Applying JSON Patches in Python
 
-License:        Modified BSD License
+License:        BSD
 URL:            http://pypi.python.org/pypi/jsonpatch/0.12
 Source0:        http://pypi.python.org/packages/source/j/jsonpatch/jsonpatch-%{version}.tar.gz
 BuildArch:      noarch
@@ -24,9 +24,8 @@ Build self-validating python objects using JSON schemas
 %{__python} setup.py install --skip-build --root %{buildroot}
 
 %files
-%doc README.md
-%{python_sitelib}/jsonpatch
-%{python_sitelib}/jsonpatch-%{version}-py?.?.egg-info
+%defattr(-,root,root,-)
+%{python_sitelib}/*
 
 %changelog
 * Fri Feb 15 2013 Dan Prince - 0.12.0-1

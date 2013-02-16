@@ -9,7 +9,7 @@ Source0:        http://pypi.python.org/packages/source/j/jsonpatch/jsonpatch-%{v
 BuildArch:      noarch
 
 BuildRequires:  python-devel
-
+Requires:       python-jsonpointer >= 0.6
 
 %description
 Build self-validating python objects using JSON schemas
@@ -28,5 +28,5 @@ Build self-validating python objects using JSON schemas
 %{python_sitelib}/*
 
 %changelog
-* Fri Feb 15 2013 Dan Prince - 0.12.0-1
+* Sat Feb 16 2013 Dan Prince - 0.12.0-1
 - Initial package.
